@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  min-width: $min-width;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    max-width: $max-width;
+  }
+}
+
+nav {
+  flex: 1 1 auto;
+  max-width: 100%;
+  width: 100%;
+  background-color: $navbar-background-color;
+  border-right: none;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 20px;
+
+  @media (min-width: 600px) {
+    flex: 1 1 20%;
+    border-right: 1px solid #333;
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+  max-width: 100%;
+  padding: 0;
+
+  @media (min-width: 600px) {
+    flex: 1 1 75%;
+    max-width: 75%;
+  }
+}

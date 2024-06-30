@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+.cocktail-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 100%;
+  background-color: $card-background-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  gap: 15px;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__info {
+    flex: 1;
+    margin-bottom: 20px;
+
+    h2 {
+      font-family: $font-family;
+      color: $primary-color;
+    }
+
+    p,
+    h3,
+    ul {
+      font-family: $font-family;
+      color: $secondary-color;
+      margin: 10px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    @media (min-width: 600px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
